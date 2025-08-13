@@ -1,21 +1,12 @@
-# Career Navigator - Auth Pages
+Signup Page
 
-Two simple authentication pages using **HTML**, **CSS**, and **JS**:
 
-## Pages
-- **Login:** Username/Email, Password, Login button, link to Signup.
-- **Signup:** Name, Email, Password, Confirm Password, Signup button, link to Login.
 
-## Features
-- Gradient background: `linear-gradient(to bottom, #2a2a72, #009ffd)`
-- Header & button color: `#3399ff`
-- Card layout with shadows & rounded corners
-- Basic JS validation for empty fields & password match
+<img width="1376" height="756" alt="Screenshot 2025-08-13 193809" src="https://github.com/user-attachments/assets/5984a200-1a4e-4d0a-85a1-d3b2bb43f32a" />
 
-## Usage
-- Open `login.html` or `signup.html` in a browser.
-- Pages are linked for easy navigation.
 
-## Next Steps
-- Add backend & database
-- Mobile-friendly design
+Login Page
+
+
+
+<img width="1296" height="712" alt="image" src="https://github.com/user-attachments/assets/0129226e-945f-4c25-b913-6b883b6f9e18" />
