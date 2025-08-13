@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Navigator - Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #2a2a72, #009ffd);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .card {
+        background: white;
+        border-radius: 12px;
+        width: 320px;
+        overflow: hidden;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    .header {
+        background: #3399ff; /* updated lighter blue */
+        color: white;
+        padding: 25px 15px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+    }
+    .header::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: white;
+        border-top-left-radius: 50% 20px;
+        border-top-right-radius: 50% 20px;
+    }
+    .content {
+        padding: 20px;
+        padding-top: 35px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #444;
+    }
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background: #3399ff; /* updated lighter blue */
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #5ab0ff; /* hover lighter shade */
+    }
+    .link {
+        text-align: center;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+    .link a {
+        color: #3399ff;
+        text-decoration: none;
+    }
+</style>
+</head>
+<body>
+<div class="card">
+    <div class="header">Career Navigator</div>
+    <div class="content">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username or Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <div class="link">
+            New user? <a href="signup.html">Register</a>
+        </div>
+    </div>
+</div>
+
+<script>
+function login() {
+    let username = document.getElementById("username").value.trim();
+    let password = document.getElementById("password").value.trim();
+
+    if (!username || !password) {
+        alert("Please enter both username/email and password.");
+        return;
+    }
+    alert("Login successful!");
+}
+</script>
+</body>
+</html>
