@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Navigator - Landing Page</title>
+<!-- Font Awesome CDN for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #2a2a72, #009ffd);
+        color: #333;
+    }
+
+    /* Navbar */
+    header {
+        background: #3399ff;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    header h2 {
+        margin: 0;
+        font-size: 22px;
+    }
+    nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+    }
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        max-width: 600px;
+    }
+    .hero .btn {
+        padding: 12px 25px;
+        background: #ff9800;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .hero .btn:hover {
+        background: #e68900;
+    }
+
+    /* Features Section */
+    .features {
+        background: white;
+        padding: 50px 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .feature {
+        background: #f9f9f9;
+        width: 280px;
+        padding: 25px;
+        margin: 15px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .feature:hover {
+        transform: translateY(-5px);
+    }
+    .feature i {
+        font-size: 40px;
+        color: #3399ff;
+        margin-bottom: 15px;
+    }
+    .feature h3 {
+        color: #3399ff;
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+        background: #3399ff;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <h2>Career Navigator</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Career Navigator</h1>
+        <p>Plan, explore, and achieve your dream career path with personalized guidance and resources.</p>
+        <a href="signup.html" class="btn">Get Started</a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="feature">
+            <i class="fas fa-user-graduate"></i>
+            <h3>Personalized Guidance</h3>
+            <p>Discover career options tailored to your interests, strengths, and future goals.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-briefcase"></i>
+            <h3>Job Opportunities</h3>
+            <p>Stay ahead with access to the latest job openings and internships in your field.</p>
+        </div>
+        <div class="feature">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Skill Building</h3>
+            <p>Gain curated resources and tips to sharpen your skills and boost your confidence.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Career Navigator. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
