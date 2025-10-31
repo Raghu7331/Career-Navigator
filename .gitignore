@@ -8,6 +8,8 @@ package-lock.json
 .env
 .env.local
 .env.*.local
+# But allow production environment files
+!.env.production
 
 # Build Output
 dist/
