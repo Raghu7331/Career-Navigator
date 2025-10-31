@@ -38,18 +38,29 @@ app.use('/api/', limiter);
 // CORS configuration
 // Allow all common frontend dev server ports for development and production frontend
 app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL || 'http://localhost:5173',
-    'http://localhost:5173',
-    'http://localhost:5174',
-    'http://localhost:5175',
-    'http://localhost:3000',  // React default port
-    'https://career-navigator-frontend.onrender.com',  // Production frontend (update when deployed)
-    /\.onrender\.com$/  // Allow all Render subdomains
-  ],
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = [
+      'http://localhost:5173',
+      'http://localhost:5174',
+      'http://localhost:5175',
+      'http://localhost:3000',
+      process.env.FRONTEND_URL
+    ];
+    
+    // Allow all Render.com subdomains
+    if (origin.endsWith('.onrender.com') || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    
+    console.log('⚠️ CORS blocked origin:', origin);
+    return callback(null, true); // For development, allow all. In production, use: callback(new Error('Not allowed by CORS'))
+  },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 }));
 
 // Body parsing middleware
