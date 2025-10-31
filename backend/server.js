@@ -36,14 +36,16 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 // CORS configuration
-// Allow all common frontend dev server ports for development
+// Allow all common frontend dev server ports for development and production frontend
 app.use(cors({
   origin: [
     process.env.FRONTEND_URL || 'http://localhost:5173',
     'http://localhost:5173',
     'http://localhost:5174',
     'http://localhost:5175',
-    'http://localhost:3000'  // Also allow React default port
+    'http://localhost:3000',  // React default port
+    'https://career-navigator-frontend.onrender.com',  // Production frontend (update when deployed)
+    /\.onrender\.com$/  // Allow all Render subdomains
   ],
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
@@ -56,6 +58,11 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Static files (for uploaded files)
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Root endpoint
+app.get('/', (req, res) => {
+  res.send('MongoDB Connected Successfully 🚀');
+});
 
 // Health check endpoint
 app.get('/health', (req, res) => {
