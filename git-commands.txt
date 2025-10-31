@@ -1,0 +1,48 @@
+# Career Navigator - Push to GitHub Commands
+# Copy and paste these commands one by one
+
+# ============================================
+# STEP 1: Initialize Git
+# ============================================
+git init
+
+# ============================================
+# STEP 2: Add all files to staging
+# ============================================
+git add .
+
+# ============================================
+# STEP 3: Create first commit
+# ============================================
+git commit -m "Initial commit: Career Navigator - Full-stack job recommendation platform"
+
+# ============================================
+# STEP 4: Add GitHub remote
+# REPLACE 'Raghu7331' with your username if different
+# ============================================
+git remote add origin https://github.com/Raghu7331/career-navigator.git
+
+# ============================================
+# STEP 5: Set main branch and push
+# ============================================
+git branch -M main
+git push -u origin main
+
+# ============================================
+# AUTHENTICATION
+# ============================================
+# When prompted:
+# Username: Raghu7331
+# Password: [Use Personal Access Token]
+#
+# Get token from: https://github.com/settings/tokens
+# - Click "Generate new token (classic)"
+# - Select "repo" scope
+# - Copy the token and use it as password
+
+# ============================================
+# FUTURE UPDATES (after initial push)
+# ============================================
+# git add .
+# git commit -m "Your update message"
+# git push
