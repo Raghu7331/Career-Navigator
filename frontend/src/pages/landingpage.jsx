@@ -152,8 +152,8 @@ export default function CareerNavigator() {
         <Link to="/" style={{ ...brand, textDecoration: "none" }}>Career Navigator</Link>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
-            <Link to="/job-opportunities" style={{ color: "white", textDecoration: "none" }}>Jobs</Link>
-            <Link to="/personalized-guidance" style={{ color: "white", textDecoration: "none" }}>Guidance</Link>
+            <Link to="/skill-building" style={{ color: "white", textDecoration: "none" }}>Skill Building</Link>
+            <Link to="/user-messages" style={{ color: "white", textDecoration: "none" }}>Messages</Link>
             <Link to="/dashboard" style={{ color: "white", textDecoration: "none" }}>Dashboard</Link>
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>Sign Out</Link>
           </nav>

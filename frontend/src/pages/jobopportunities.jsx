@@ -33,10 +33,12 @@ export default function JobOpportunities() {
   const fetchJobs = async () => {
     try {
       setLoading(true);
-      const response = await jobsAPI.getAllJobs();
+      const response = await jobsAPI.getJobs();
       if (response.success && response.data?.jobs) {
         setJobs(response.data.jobs);
         setFilteredJobs(response.data.jobs);
+      } else {
+        setError('No jobs found.');
       }
     } catch (err) {
       console.error('Error fetching jobs:', err);
@@ -191,8 +193,6 @@ export default function JobOpportunities() {
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
             <Link to="/home" style={{ color: "white", textDecoration: "none" }}>Back to Home</Link>
-            <Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link>
-            <Link to="/contact" style={{ color: "white", textDecoration: "none" }}>Contact</Link>
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>Sign Out</Link>
           </nav>
         </div>

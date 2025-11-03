@@ -139,8 +139,6 @@ export default function PersonalizedGuidance() {
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
             <Link to="/home" style={{ color: "white", textDecoration: "none" }}>Back to Home</Link>
-            <Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link>
-            <Link to="/contact" style={{ color: "white", textDecoration: "none" }}>Contact</Link>
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>Sign Out</Link>
           </nav>
         </div>
