@@ -157,7 +157,7 @@ export default function Login() {
   return (
     <div style={page}>
       <header style={header}>
-        <Link to="/" style={{ ...brand, textDecoration: "none" }}>Career Navigator</Link>
+        <div style={{ ...brand, textDecoration: "none" }}>Career Navigator</div>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
             <Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link>
