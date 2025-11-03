@@ -21,6 +21,9 @@ const enhancedEmailRoutes = require('./routes/enhancedEmail');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// Trust proxy - required for Render.com deployment
+app.set('trust proxy', 1);
+
 // Security middleware
 app.use(helmet());
 
@@ -50,8 +53,10 @@ app.use(cors({
       process.env.FRONTEND_URL
     ];
     
-    // Allow all Render.com subdomains
-    if (origin.endsWith('.onrender.com') || allowedOrigins.includes(origin)) {
+    // Allow all Render.com subdomains and Vercel deployments
+    if (origin.endsWith('.onrender.com') || 
+        origin.endsWith('.vercel.app') || 
+        allowedOrigins.includes(origin)) {
       return callback(null, true);
     }
     
