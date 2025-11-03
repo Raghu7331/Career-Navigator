@@ -1,8 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function About() {
   const [dark, setDark] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Check if user is logged in
+    const token = localStorage.getItem("token");
+    const userAuth = localStorage.getItem("userAuth");
+    setIsLoggedIn(!!token || userAuth === "true");
+  }, []);
 
   const page = {
     fontFamily: "Segoe UI, Roboto, Helvetica, Arial, sans-serif",
@@ -118,10 +126,11 @@ export default function About() {
         <Link to="/" style={{ ...brand, textDecoration: "none" }}>Career Navigator</Link>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
+            {isLoggedIn && <Link to="/" style={{ color: "white", textDecoration: "none" }}>Home</Link>}
             <span style={{ color: "white", textDecoration: "underline" }}>About</span>
             <Link to="/contact" style={{ color: "white", textDecoration: "none" }}>Contact</Link>
-            <Link to="/login" style={{ color: "white", textDecoration: "none" }}>Login</Link>
-            <Link to="/signup" style={{ color: "white", textDecoration: "none" }}>Signup</Link>
+            {!isLoggedIn && <Link to="/login" style={{ color: "white", textDecoration: "none" }}>Login</Link>}
+            {!isLoggedIn && <Link to="/signup" style={{ color: "white", textDecoration: "none" }}>Signup</Link>}
           </nav>
         </div>
       </header>
