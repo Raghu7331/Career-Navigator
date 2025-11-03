@@ -178,7 +178,6 @@ export default function Contact() {
         <Link to="/" style={{ ...brand, textDecoration: "none" }}>Career Navigator</Link>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
-            <Link to="/home" style={{ color: "white", textDecoration: "none" }}>Home</Link>
             <Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link>
             <span style={{ color: "white", textDecoration: "underline" }}>Contact</span>
             <Link to="/login" style={{ color: "white", textDecoration: "none" }}>Login</Link>

@@ -118,7 +118,6 @@ export default function About() {
         <Link to="/" style={{ ...brand, textDecoration: "none" }}>Career Navigator</Link>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
-            <Link to="/home" style={{ color: "white", textDecoration: "none" }}>Home</Link>
             <span style={{ color: "white", textDecoration: "underline" }}>About</span>
             <Link to="/contact" style={{ color: "white", textDecoration: "none" }}>Contact</Link>
             <Link to="/login" style={{ color: "white", textDecoration: "none" }}>Login</Link>
