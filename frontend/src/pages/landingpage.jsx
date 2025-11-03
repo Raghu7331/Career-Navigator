@@ -152,8 +152,6 @@ export default function CareerNavigator() {
         <Link to="/" style={{ ...brand, textDecoration: "none" }}>Career Navigator</Link>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
-            <Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link>
-            <Link to="/contact" style={{ color: "white", textDecoration: "none" }}>Contact</Link>
             <Link to="/dashboard" style={{ color: "white", textDecoration: "none" }}>Dashboard</Link>
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>Sign Out</Link>
           </nav>
