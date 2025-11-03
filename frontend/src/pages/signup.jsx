@@ -208,7 +208,7 @@ export default function Signup() {
   return (
     <div style={page}>
       <header style={header}>
-        <div style={{ ...brand, textDecoration: "none" }}>Career Navigator</div>
+        <span style={brand}>Career Navigator</span>
         <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
           <nav style={nav}>
             <Link to="/about" style={{ color: "white", textDecoration: "none" }}>About</Link>
