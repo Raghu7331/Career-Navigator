@@ -181,21 +181,8 @@ export default function Signup() {
       const response = await authAPI.register(userData);
       
       if (response.success) {
-        // Auto-login after successful registration
-        const loginResponse = await authAPI.login({
-          email: formData.email,
-          password: formData.password
-        });
-
-        if (loginResponse.success) {
-          // Set legacy localStorage values for compatibility
-          localStorage.setItem("currentUser", loginResponse.data.user.email);
-          localStorage.setItem("userAuth", "true");
-          localStorage.setItem("userName", loginResponse.data.user.name);
-          
-          alert("Account created successfully! Welcome to Career Navigator!");
-          navigate("/resume-upload");
-        }
+        alert("Account created successfully! Please login to continue.");
+        navigate("/login");
       }
     } catch (error) {
       console.error("Signup failed:", error);
